@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+    <link rel="fluid-icon" href="/favicon.png" title="Talker">
+
+    <title>Talker</title>
+
+    <script src="js/lib/jquery-1.7.js"></script>
+    <script src="js/lib/socket.io.js"></script>
+    <script src="js/lib/underscore.js"></script>
+
+    <script src="js/lib/jquery.imagesloaded.js"></script>
+    <script src="js/lib/jquery.caret.js"></script>
+    <script src="js/lib/string.trim.js"></script>
+
+    <script src="js/core/client.js"></script>
+    <script src="js/core/focus.js"></script>
+
+    <script src="js/plugins/desktop_notifications.js"></script>
+    <script src="js/plugins/dock_badge.js"></script>
+    <script src="js/plugins/emoji.js"></script>
+    <script src="js/plugins/image_formatter.js"></script>
+    <script src="js/plugins/loading.js"></script>
+    <script src="js/plugins/logger.js"></script>
+    <script src="js/plugins/mentions_highlight.js"></script>
+    <script src="js/plugins/message_box.js"></script>
+    <script src="js/plugins/paste_formatter.js"></script>
+    <script src="js/plugins/presence.js"></script>
+    <script src="js/plugins/recent_messages.js"></script>
+    <script src="js/plugins/responsive.js"></script>
+    <script src="js/plugins/sound.js"></script>
+    <script src="js/plugins/tabs.js"></script>
+    <script src="js/plugins/title_message_count.js"></script>
+    <script src="js/plugins/url_linker.js"></script>
+
+    <script src="js/plugins/cloudapp.js"></script>
+
+    <script src="js/client.js"></script>
+
+    <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/chat.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+
+    <ul class="channels">
+      <li class="active">#teambox</li>
+    </ul>
+
+    <div class="sidebar">
+      <p>Users online:</p>
+      <ul class="users"></ul>
+    </div>
+
+    <div class="log"></div>
+
+    <div class="chat_input">
+      <textarea placeholder="Type your chat message here..."></textarea>
+    </div>
+
+  </body>
+</html>

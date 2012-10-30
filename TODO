@@ -1,0 +1,21 @@
+Must have
+---------
+
+- Teambot
+
+
+Should have
+-----------
+
+- Webhooks for a channel
+- Multiple rooms
+- Settings pane for notifications
+- Persistent logging
+- Look for XSS
+- Browser support
+
+
+Good to have
+------------
+
+- Mobile versions
