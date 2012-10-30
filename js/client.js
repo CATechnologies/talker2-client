@@ -1,7 +1,7 @@
 $(function () {
 
   var nick = "user" + ~~(Math.random() * 1000);
-  var channel = '#linux-123';
+  var channel = "#teambox";
   var server = "talker-bridge.jit.su:80";
 
   // get nick from url params
