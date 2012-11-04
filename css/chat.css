@@ -104,12 +104,24 @@ ul.channels {
       font-family: monospace;
     }
     .log p.message span.content {
-      background: #EEFAFF;
+      background: #DDEFF8;
       font-size: 14px;
       word-wrap: break-word;
     }
       .log p.own.message span.content {
         background: rgb(250, 238, 222);
+      }
+    .log p.private span.content {
+      font-style: italic;
+      color: #555555;
+    }
+      .log p.private.message span.content {
+        background: #EEFFFF;
+        border: 2px dotted #DDEFF8;
+      }
+      .log p.own.private.message span.content {
+        background: #FCF6EE;
+        border: 2px dotted #F8E4C9;
       }
     .log p.message span.content {
       border-radius: 5px;
@@ -134,7 +146,7 @@ ul.channels {
     }
     /* Mentions */
     .log p.message.mention span.content {
-      background: #ffa;
+      background: #ffffaa;
     }
 
 

@@ -33,11 +33,23 @@
   });
 
   Talker.client.on("send:message", function (e) {
-    Log.log(Talker.client.nick, e.message, "own message");
+    if (e.channel.match(/^#/)) {
+      // Post to channel
+      Log.log(Talker.client.nick, e.message, "own message");
+    } else {
+      // Private message
+      Log.log(Talker.client.nick, "private to " + e.channel + ": " + e.message, "own message private");
+    }
   });
 
   Talker.client.on("message", function (e) {
-    Log.log(e.nick, e.message, "message");
+    if ((e.destination || "").match(/^#/)) {
+      // Post to channel
+      Log.log(e.nick, e.message, "message");
+    } else {
+      // Private message
+      Log.log(Talker.client.nick, "private from " + e.nick + ": " + e.message, "message private");
+    }
   });
 
   Talker.client.on("send:paste", function (e) {
