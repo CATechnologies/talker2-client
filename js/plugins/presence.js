@@ -10,6 +10,11 @@
 
   function _addUser(nick) {
     _removeUser(nick);
+
+    if (Talker.isBot(nick)) {
+      return;
+    }
+
     $('ul.users').append(
       $("<li>").text(nick).attr('data-user', nick)
     );

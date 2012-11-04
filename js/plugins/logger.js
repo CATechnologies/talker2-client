@@ -49,19 +49,21 @@
   });
 
   Talker.client.on("join", function (e) {
-    if (e.nick !== "teambot") {
+    if (!Talker.isBot(e.nick)) {
       Log.log("", e.nick + " joined the room", "status join");
     }
   });
 
   Talker.client.on("part", function (e) {
-    if (e.nick !== "teambot") {
+    if (!Talker.isBot(e.nick)) {
       Log.log("", e.nick + " left the room", "status part");
     }
   });
 
   Talker.client.on("quit", function (e) {
-    Log.log("", e.nick + " quit the chat", "status quit");
+    if (e.nick !== "teambot" && e.nick !== "github") {
+      Log.log("", e.nick + " quit the chat", "status quit");
+    }
   });
 
   Talker.client.on("nick", function (e) {
