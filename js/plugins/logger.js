@@ -32,6 +32,13 @@
     Log.log("***", "connected!", "server");
   });
 
+  Talker.client.on("notice", function (e) {
+    if (e.to === "AUTH" || e.nick === Talker.client.nick || !e.text) {
+      return;
+    }
+    Log.log(e.nick || e.to, e.text, "server");
+  });
+
   Talker.client.on("send:message", function (e) {
     if (e.channel.match(/^#/)) {
       // Post to channel

@@ -18,7 +18,7 @@
     //
     // Whenever we receive an event of this type, it'll be broadcasted
     // in JS with Talker.client.trigger
-    var listeners = ["ready", "registered", "message", "join", "part", "names", "quit", "nick",
+    var listeners = ["ready", "registered", "message", "join", "part", "names", "quit", "nick", "notice",
         "recent_messages", "load_paste"];
 
     // Add all listeners
