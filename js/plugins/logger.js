@@ -50,7 +50,6 @@
   });
 
   Talker.client.on("message", function (e) {
-    console.log(e.message, e);
     if (e.destination === Talker.client.nick && e.nick !== Talker.client.nick) {
       // Private message
       Log.log(Talker.client.nick, "private from " + e.nick + ": " + e.message, "message private");
