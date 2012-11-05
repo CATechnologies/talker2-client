@@ -26,15 +26,15 @@ ul.channels {
   height: 21px;
   left: 0;
   right: 0;
-  background: #eee;
+  background: #eeeeee;
   display: block;
   z-index: 1;
   box-sizing: border-box;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #999999;
 }
   ul.channels li {
     padding: 4px 10px;
-    border-right: 1px solid #999;
+    border-right: 1px solid #999999;
     display: inline-block;
   }
   ul.channels li.active {
@@ -85,13 +85,13 @@ ul.channels {
       }
       .log span.content a {
         text-decoration: underline;
-        color: #59f;
+        color: #1155aa;
       }
     .log p.status {
-      color: #999;
+      color: #999999;
     }
     .log p.server {
-      color: #999;
+      color: #999999;
     }
     .log p.paste span.content pre {
       overflow: auto;
@@ -166,7 +166,7 @@ ul.channels {
     height: 40px;
   }
     .chat_input textarea.disabled {
-      background: #eee;
+      background: #eeeeee;
     }
 
 
@@ -180,22 +180,22 @@ ul.channels {
   right: 0;
   width: 150px;
   bottom: 0;
-  background: #eee;
+  background: #eeeeee;
   display: block;
   z-index: 1;
   box-sizing: border-box;
-  border-left: 1px solid #999;
+  border-left: 1px solid #999999;
 }
   .sidebar p {
     margin: 5px;
-    color: #999;
+    color: #999999;
   }
 
   .sidebar ul.users {
   }
     .sidebar ul.users li {
       padding: 4px 10px;
-      border-right: 1px solid #999;
+      border-right: 1px solid #999999;
       display: block;
     }
 
