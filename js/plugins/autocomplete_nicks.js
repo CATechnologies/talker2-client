@@ -1,3 +1,7 @@
+/**
+ * Autocomplete user nicks when typing "@"
+ */
+
 (function () {
 
   function bindAutocompleter() {
