@@ -15,9 +15,11 @@
       return;
     }
 
-    $('ul.users').append(
-      $("<li>").text(nick).attr('data-user', nick)
-    );
+    var $li = $("<li>").text(nick).attr('data-user', nick);
+    if (nick === Talker.client.nick) {
+      $li.css("font-weight", "bold");
+    }
+    $('ul.users').append($li);
   }
 
   function _sortUsers() {
