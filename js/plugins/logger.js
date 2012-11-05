@@ -103,4 +103,7 @@
     }
   });
 
+  // Scroll to bottom after resizing window
+  $(window).resize(_.debounce(Log.scrollToBottom, 300));
+
 }());
