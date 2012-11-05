@@ -50,12 +50,13 @@
   });
 
   Talker.client.on("message", function (e) {
-    if ((e.destination || "").match(/^#/)) {
-      // Post to channel
-      Log.log(e.nick, e.message, "message");
-    } else {
+    console.log(e.message, e);
+    if (e.destination === Talker.client.nick && e.nick !== Talker.client.nick) {
       // Private message
       Log.log(Talker.client.nick, "private from " + e.nick + ": " + e.message, "message private");
+    } else {
+      // Post to channel
+      Log.log(e.nick, e.message, "message");
     }
   });
 
