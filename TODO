@@ -12,6 +12,9 @@ Should have
 - Settings pane for notifications
 - Look for XSS
 - Browser support
+- Don't scroll to bottom if scrolling somewhere else (allow force parameter)
+- 
+
 
 
 Good to have
@@ -21,4 +24,4 @@ Good to have
 - Searchable logs
 - IRC colors to <span>
 - Clear log button
-
+- /msg should strip @, and should fail for unexisting nick
