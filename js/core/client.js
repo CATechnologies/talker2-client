@@ -33,6 +33,11 @@
       Talker.client.trigger("connect");
     });
 
+    // Connect to server, and request IRC connection
+    socket.on('registered', function (e) {
+      Talker.client.nick = e.nick;
+    });
+
     socket.on('ready', function () {
       socket.emit('init', { nick: nick, channel: channel });
     });

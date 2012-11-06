@@ -20,7 +20,9 @@
     }
 
     // Remove loading message
-    $(".log p.loading").remove();
+    $(".log p.status.loading").remove();
+
+    // TODO: Insert replayed messages where the "loading" message is
 
     // Replay all messages
     _(e.messages).each(function (message) {
@@ -38,6 +40,7 @@
         Talker.client.trigger("part", message.data);
       }
     });
+
   });
 
 
