@@ -7,7 +7,7 @@
   var count = 0
     , originalTitle = document.title;
 
-  Talker.client.on("message", function () {
+  Talker.client.on("message", function (e) {
     // Don't notify replayed messages
     if (e.replay) { return; }
 
