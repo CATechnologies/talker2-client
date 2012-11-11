@@ -76,6 +76,11 @@
       return;
     }
 
+    // Don't notify replayed events
+    if (e.replay) {
+      return;
+    }
+
     // Notify according to settings
     if (Talker.desktop_notifications.all_messages) {
       _notify(e);

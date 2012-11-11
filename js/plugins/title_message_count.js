@@ -8,6 +8,9 @@
     , originalTitle = document.title;
 
   Talker.client.on("message", function () {
+    // Don't notify replayed messages
+    if (e.replay) { return; }
+
     if (!Talker.focused) {
       count += 1;
       document.title = "(" + count + ") " + originalTitle;

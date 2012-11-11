@@ -27,7 +27,12 @@
     return; // we don't need to bind events
   }
 
-  Talker.client.on("message", function () {
+  Talker.client.on("message", function (e) {
+    // Don't notify replayed events
+    if (e.replay) {
+      return;
+    }
+
     if (!Talker.focused) {
       count += 1;
       _dockBadge(count);

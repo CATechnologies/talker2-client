@@ -20,6 +20,9 @@
   };
 
   Talker.client.on("message", function (e) {
+    // Don't notify replayed messages
+    if (e.replay) { return; }
+
     // If focused and we don't want notify on focus, return
     if (Talker.focus && !Talker.sound_notifications.notify_on_focus) {
       return;

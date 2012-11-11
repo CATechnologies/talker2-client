@@ -43,7 +43,8 @@
     });
 
     // Lost socket connection
-    socket.on('disconnect', function () {
+    socket.on('disconnect', function (e) {
+      console.log("Lost socket connection!", e);
       Talker.client.trigger("disconnect");
     });
   };
