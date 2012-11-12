@@ -43,26 +43,22 @@
 
   // Join room
   Talker.client.on("join", function (msg) {
-    if (msg.replay) { return; }
     _addUser(msg.nick);
     _sortUsers();
   });
 
   // Part room
   Talker.client.on("part", function (msg) {
-    if (msg.replay) { return; }
     _removeUser(msg.nick);
   });
 
   // Quit
   Talker.client.on("quit", function (msg) {
-    if (msg.replay) { return; }
     _removeUser(msg.nick);
   });
 
   // Rename user
   Talker.client.on("nick", function (msg) {
-    if (msg.replay) { return; }
     $('ul.users li[data-user=' + msg.old_nick + ']').text(msg.new_nick).attr('data-user', msg.new_nick);
     _sortUsers();
   });
