@@ -33,7 +33,7 @@
   });
 
   Talker.client.on("notice", function (e) {
-    if (e.to === "AUTH" || e.nick === Talker.client.nick || !e.text) {
+    if (e.to === "AUTH" || !e.nick || e.nick === Talker.client.nick || !e.text) {
       return;
     }
     Log.log(e.nick || e.to, e.text, "server");
