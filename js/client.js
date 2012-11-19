@@ -21,7 +21,8 @@ $(function () {
     config.nick = n[1];
   } else {
     config.nick = prompt("Choose a nickname for the chat:") || config.nick;
-    window.location = (window.location + "&nick=" + config.nick).replace(/\/&/, "&");
+    console.log((window.location.href + "&nick=" + config.nick).replace(/\/&/, "?"));
+    window.location = (window.location.href + "&nick=" + config.nick).replace(/\/&/, "?");
   }
 
   // Start Talker client
