@@ -2,7 +2,7 @@ $(function () {
 
   var config = { nick: "user" + ~~(Math.random() * 1000)
                , channel: "#teambox"
-               , server: document.location.origin
+               , server: "talker-bridge.jit.su:80"
                };
 
   // get channel from url params
